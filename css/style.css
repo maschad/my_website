@@ -20,7 +20,7 @@
     min-height: 632px;
     max-height: 864px;
     position: relative;
-    background-color:  #8BC34A;
+    background-color:  #2196F3;
 }
 
 #nav_f{
@@ -39,14 +39,14 @@
     position: absolute;
     color: #fff;
     display: inline-block;
-    font-size: 1.1rem;
+    font-size: 2.1rem;
     font-style: normal;
     font-weight: 100;
     padding: 0;
     letter-spacing: 7px;
 }
 
-@media(max-width: 992px)
+@media only screen and (max-width: 992px)
 .brand-logo{
     font-size: 1.1rem;
 }
@@ -231,7 +231,7 @@ input, textarea {
 }
 
 nav a.button-collapse {
-    left: -25px;
+    left: -15px;
 }
 
 .card-avatar .waves-effect {
