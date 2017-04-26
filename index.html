@@ -104,7 +104,7 @@
 <!--Skills-->
 <div class="section scrollspy" id="skills">
     <div class="container">
-        <h2 class="header text_b">My Skills </h2>
+        <h2 class="header text_b">My Programming Skills </h2>
         <div class="row">
             <div class="col s12 m3" style="padding: 8px;">
                 <div id="js" class="circle-loading"></div>
@@ -129,6 +129,20 @@
             </div>
             <div class="col s12 m3" style="padding: 8px;">
                 <div id="cs" class="circle-loading"></div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h2 class="header text_b">My DevOps Skills </h2>
+        <div class="row">
+            <div class="col s12 m3" style="padding: 8px;">
+                <div id="git" class="circle-loading"></div>
+            </div>
+            <div class="col s12 m3" style="padding: 8px;">
+                <div id="jira" class="circle-loading"></div>
+            </div>
+            <div class="col s12 m3" style="padding: 8px;">
+                <div id="bitbucket" class="circle-loading"></div>
             </div>
         </div>
     </div>
@@ -474,6 +488,60 @@
     cppbar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
     cppbar.text.style.color = '#2196F6';
 
+    var jirabar = new ProgressBar.Circle(jira, {
+      color: '#458e0e',
+      trailColor: '#eee',
+      trailWidth: 0.3,
+      duration: 1400,
+      easing: 'bounce',
+      strokeWidth: 1,
+      from: {color: '#FFEA82', a:0},
+      to: {color: '#458e0e', a:1},
+      // Set default step function for all animate calls
+      step: function(state, circle) {
+        circle.path.setAttribute('stroke', state.color);
+        circle.setText('JIRA');
+      }
+     });
+    jirabar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
+    jirabar.text.style.color = '#2196F6';
+
+    var gitbar = new ProgressBar.Circle(git, {
+      color: '#f44283',
+      trailColor: '#eee',
+      trailWidth: 0.3,
+      duration: 1400,
+      easing: 'bounce',
+      strokeWidth: 1,
+      from: {color: '#FFEA82', a:0},
+      to: {color: '#f44283', a:1},
+      // Set default step function for all animate calls
+      step: function(state, circle) {
+        circle.path.setAttribute('stroke', state.color);
+        circle.setText('Git');
+      }
+     });
+    gitbar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
+    gitbar.text.style.color = '#2196F6';
+
+    var bitbucketbar = new ProgressBar.Circle(bitbucket, {
+      color: '#42bcf4',
+      trailColor: '#eee',
+      trailWidth: 0.3,
+      duration: 1400,
+      easing: 'bounce',
+      strokeWidth: 1,
+      from: {color: '#FFEA82', a:0},
+      to: {color: '#42bcf4', a:1},
+      // Set default step function for all animate calls
+      step: function(state, circle) {
+        circle.path.setAttribute('stroke', state.color);
+        circle.setText('Bitbucket');
+      }
+     });
+    bitbucketbar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
+    bitbucketbar.text.style.color = '#2196F6';
+
     $(window).on("scroll resize", function(){
         if(inViewport($('#bio')) > 200){
             $('#bio').addClass('animated rubberBand');
@@ -488,6 +556,9 @@
             phpbar.animate(0.4);
             ionicbar.animate(0.9);
             cppbar.animate(0.5);
+            jirabar.animate(0.4);
+            gitbar.animate(0.8);
+            bitbucketbar.animate(0.4);
         };
             
     });
